@@ -1,0 +1,170 @@
+$bg-void: #050507;
+$bg-card: #0b0b0f;
+$bg-input: #111114;
+$border-tech: #16161e;
+$mana-red: #e63946;
+$text-muted: #55555f;
+
+.authWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg-void;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.authCard {
+  background: $bg-card;
+  border: 1px solid $border-tech;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 440px;
+  padding: 40px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.cardHeader {
+  text-align: center;
+  margin-bottom: 28px;
+
+  .logo {
+    font-weight: 900;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin-bottom: 6px;
+
+    span {
+      color: $mana-red;
+    }
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+    color: $text-muted;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.errorAlert {
+  background: rgba($mana-red, 0.08);
+  border: 1px solid rgba($mana-red, 0.2);
+  color: $mana-red;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.successBlock {
+  background: rgba(46, 204, 113, 0.05);
+  border: 1px solid rgba(46, 204, 113, 0.2);
+  padding: 24px;
+  border-radius: 6px;
+  text-align: center;
+
+  p {
+    color: #2ecc71;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 0 6px 0;
+  }
+
+  span {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #8e8e93;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  input {
+    background: $bg-input;
+    border: 1px solid $border-tech;
+    outline: none;
+    padding: 12px 14px;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    transition: border-color 0.2s ease;
+
+    &::placeholder {
+      color: #3a3a42;
+    }
+
+    &:focus {
+      border-color: rgba($mana-red, 0.5);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+.submitBtn {
+  background: $mana-red;
+  border: 1px solid $mana-red;
+  color: #ffffff;
+  padding: 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background: #bf2633;
+    border-color: #bf2633;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.cardFooter {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $text-muted;
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 4px;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $mana-red;
+    }
+  }
+}

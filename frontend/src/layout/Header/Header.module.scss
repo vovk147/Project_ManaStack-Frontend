@@ -1,0 +1,289 @@
+$bg-header: #0a0a0c;
+$border-dark: #16161a;
+$red-brand: #e63946;
+
+.header {
+  background: $bg-header;
+  border-bottom: 1px solid $border-dark;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  .container {
+    width: 100%;
+    padding: 0 40px; // Растягиваем на всю ширину экрана
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.leftNav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+
+  .logo {
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+
+    .dot {
+      color: $red-brand;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    gap: 24px;
+
+    .navLink {
+      color: #66666e;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+
+      &:hover, &.active {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+/* Замени старый .profileBtn на этот .userWidget */
+.userWidget {
+  background: #111113;
+  border: 1px solid #16161a;
+  padding: 6px 14px 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+  user-select: none;
+
+  &:hover, &.active {
+    border-color: #2a2a35;
+    background: #141418;
+
+    .arrowIcon {
+      transform: rotate(180deg);
+      color: #ffffff;
+    }
+  }
+
+  .avatarZone {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .avatarFallback {
+      width: 100%;
+      height: 100%;
+      background: #e63946; // Фирменный карминовый цвет для первой буквы
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 0.85rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .userMeta {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    .username {
+      color: #ffffff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .emailSub {
+      color: #4a4a52;
+      font-size: 0.7rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+  }
+
+  .arrowIcon {
+    color: #4a4a52;
+    transition: transform 0.2s ease, color 0.2s ease;
+    margin-left: 4px;
+  }
+}
+
+/* Обновленное меню — теперь оно шире, чтобы вместить красивые пункты */
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #111113;
+  border: 1px solid #16161a;
+  border-radius: 6px;
+  width: 200px;
+  padding: 6px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 200;
+
+  .dropdownItem {
+    color: #8e8e93;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-radius: 4px;
+    display: block;
+    transition: background 0.15s ease, color 0.15s ease;
+
+    &:hover {
+      background: #16161a;
+      color: #ffffff;
+    }
+
+    .accentText {
+      color: #ffffff;
+      font-weight: 700;
+    }
+  }
+
+  .divider {
+    border: 0;
+    height: 1px;
+    background: #16161a;
+    margin: 4px 0;
+  }
+
+  .logoutBtn {
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    color: #e63946;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 10px 12px;
+    border-radius: 4px;
+    transition: background 0.15s ease;
+
+    &:hover {
+      background: rgba(#e63946, 0.05);
+    }
+  }
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #111113;
+  border: 1px solid $border-dark;
+  border-radius: 6px;
+  width: 180px;
+  padding: 6px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+
+  .dropdownItem {
+    color: #8e8e93;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+
+    &:hover {
+      background: #16161a;
+      color: #ffffff;
+    }
+  }
+
+  .divider {
+    border: 0;
+    height: 1px;
+    background: $border-dark;
+    margin: 4px 0;
+  }
+
+  .logoutBtn {
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    color: $red-brand;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 8px 12px;
+  }
+}
+
+/* Добавь это в конец существующего файла Header.module.scss */
+
+.authButtons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .loginBtn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: #8e8e93;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  .registerBtn {
+    background: $red-brand;
+    border: 1px solid $red-brand;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      background: #bf2633;
+      border-color: #bf2633;
+    }
+  }
+}

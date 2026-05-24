@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  # Тут должен быть твой бэкенд (база данных, django и т.д.)
+  # backend:
+  #   build: ./backend
+  #   ...
+
+  # А вот сюда мы добавляем наш фронтенд:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - WATCHPACK_POLLING=true

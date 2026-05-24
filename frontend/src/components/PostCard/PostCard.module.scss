@@ -1,0 +1,58 @@
+$bg-card: #111113;
+$border-light: #1a1a1f;
+$red-brand: #e63946; // Фирменный глубокий красный
+
+.card {
+  background: $bg-card;
+  border: 1px solid $border-light;
+  border-radius: 6px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+  height: 100%;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: #2a2a35; // Мягкое благородное выделение вместо неона
+  }
+
+ /* Найди внутри .card селектор .header и замени его на этот вариант */
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+
+    .author {
+      color: $red-brand;
+    }
+
+    .metaRight {
+      display: flex;
+      align-items: center;
+      gap: 16px; // Отступ между просмотрами и датой
+
+      .views {
+        color: #666672;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        
+        svg {
+          color: #4a4a52;
+        }
+      }
+
+      .date {
+        color: #4a4a52;
+      }
+    }
+  }
+}

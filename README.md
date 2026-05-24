@@ -1,3 +1,8 @@
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD627)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 # 🌌 Project_ManaStack — Frontend
 
 Клиентская часть платформы ManaStack. Разработано как SPA (Single Page Application) с адаптивным интерфейсом, кастомной стилизацией и динамическим управлением состояниями.
@@ -21,6 +26,20 @@
 * **Инструменты:** ESLint, Docker (для контейнеризации фронтенд-сервиса)
 
 ---
+## 📂 Архитектура фронтенда (Project Structure)
+
+В основе проекта лежит модульная структура со строгим разделением ответственности:
+
+```text
+src/
+├── assets/          # Статические ресурсы (логотипы, иконки, глобальные стили)
+├── components/      # Глобальные UI-компоненты многократного использования (PostCard, Loader)
+├── context/         # React Context для управления глобальным стейтом (AuthContext)
+├── layout/          # Элементы каркаса страниц (Header, Sidebar, Footer)
+├── pages/           # Основные экраны приложения (Home, Profile, Login, Store)
+├── services/        # Слой для работы с сетью и API бэкенда (axios инстанс, эндпоинты)
+├── App.jsx          # Корневой компонент, роутинг приложения
+└── main.jsx         # Точка входа в приложение
 
 ## 🔧 Локальный запуск (How to run)
 

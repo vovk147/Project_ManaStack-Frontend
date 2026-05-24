@@ -9,7 +9,7 @@
 ## 👥 Команда проекта (Team)
 
 * **Dafforn** ([@vovk147](https://github.com/vovk147)) — **Frontend Developer** (Архитектура клиента, UI/UX, интеграция API, управление стейтом, кастомизация компонентов).
-* **Sttison** ([@Vladyslav147](https://github.com/Vladyslav147)) — **Backend Developer** (Проектирование базы данных PostgreSQL, Django REST Framework API, фоновые задачи Celery, Docker-окружение).
+* **Sttimson** ([@Vladyslav147](https://github.com/Vladyslav147)) — **Backend Developer** (Проектирование базы данных PostgreSQL, Django REST Framework API, фоновые задачи Celery, Docker-окружение).
 
 ---
 
